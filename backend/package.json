@@ -7,7 +7,8 @@
   "license": "ISC",
   "scripts": {
     "start": "node index.js",
-    "server": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build": "echo no"
   },
   "dependencies": {
     "axios": "^1.8.4",
