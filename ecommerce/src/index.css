@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins&family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* font-family: 'Playfair Display', serif; */
+}
+
+/* navbar css  */
+.navbar {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  line-height: 26px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px gray;
+  --webkit-box-shadow: 0 8px 6px -6px gray;
+  border-bottom: 0px solid gray !important;
+}
+
+.nav-link {
+  font-weight: 300 !important;
+}
+
+.active {
+  border-bottom: 2px solid gray;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-family: 'roboto', sans-serif;
+  letter-spacing: 2px;
+}
+
+/* footer css  */
+.footer {
+  color: white;
+  padding: 25px;
+  background: linear-gradient(to bottom, black, #333);
+  color: white;
+  padding: 10px;
+
+
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffafbf;
+  border-bottom: 2px solid gray;
+}
+
+
+/* register css  */
+.register {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 70vh;
+  flex-direction: column;
+
+
+}
+
+
+/* Slider default styling */
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 200px;
+    /* Smaller height on mobile */
+  }
+
+  .carousel-caption h5 {
+    font-size: 16px;
+  }
+
+  .carousel-caption p {
+    font-size: 12px;
+    display: none;
+    /* Optional: hide caption text on very small screens */
+  }
+
+  .carousel-caption {
+    bottom: 10px;
+  }
+}
+
+/* all product  */
+.productunder {
+  margin-top: 5%;
+}
+
+.categoriesunder {
+  margin-top: 9% !important;
+}
+
+.topmargin {
+  margin-top: 8%
+}
+
+.topcreate {
+  margin-top: 5%;
+}
+
+.catpro {
+  margin-top: 5% !important;
+}
+
+.categoriesunde {
+  margin-top: 6% !important;
+}
+
+/* cardHome css  */
+.custom-underline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  width: 15%;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* black with 80% opacity */
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+  /* yellow shadow with 80% opacity */
+  border-radius: 2px;
+}
+
+/* Header  */
+.brand-glow {
+  background: linear-gradient(90deg, #fff200, #ff9900, #ff4e00);
+  /* bright yellow to deep orange-red */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(255, 223, 0, 0.8), 0 0 12px rgba(255, 140, 0, 0.6);
+  font-weight: bold;
+}
+
+
+.mmcc {
+  height: 500px !important;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991.98px) {
+  .mmcc {
+    height: 400px !important;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767.98px) {
+  .mmcc {
+    height: 300px !important;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .mmcc {
+    height: 250px !important;
+  }
+}
