@@ -4,7 +4,7 @@ import { FaShoppingBag } from "react-icons/fa";
 import { useAuth } from "../../context/auth";
 import toast from "react-hot-toast";
 import SearchInput from "../Form/SearchInput";
-import useCategory from "../hooks/useCategory";
+import useCategory from "../hooks/UseCategory";
 import { useCart } from "../../context/Cart";
 import { Avatar, Badge, Space } from 'antd';
 
