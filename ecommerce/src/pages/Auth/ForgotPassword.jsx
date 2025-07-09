@@ -7,7 +7,7 @@ import { useAuth } from "../../context/auth";
 
 const ForgotPassword = () => {
   const navigate = useNavigate();
-//   const location = useLocation();
+  //   const location = useLocation();
   const [email, setEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [answer, setAnswer] = useState("");
@@ -17,7 +17,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:4000/api/auth/forgot-password", {
+      const res = await axios.post("https://ecommerce-watch.onrender.com/api/auth/forgot-password", {
         email,
         newPassword,
         answer
@@ -39,15 +39,15 @@ const ForgotPassword = () => {
 
   return (
     <Layout title={"Forgot Password - Ecommerce App"}>
-      <div 
+      <div
         className="d-flex align-items-center justify-content-center py-4"
         style={{
           background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
           minHeight: "100vh"
         }}
       >
-        <div 
-          className="card shadow-sm p-4 mx-2" 
+        <div
+          className="card shadow-sm p-4 mx-2"
           style={{
             width: "100%",
             maxWidth: "400px",

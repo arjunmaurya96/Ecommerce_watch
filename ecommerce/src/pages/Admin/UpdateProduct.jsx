@@ -25,7 +25,7 @@ const UpdateProduct = () => {
     // Get all categories
     const getAllCategory = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/category/get-category");
+            const { data } = await axios.get("https://ecommerce-watch.onrender.com/api/category/get-category");
             if (data?.success) {
                 setCategories(data.categories);
             }
@@ -38,7 +38,7 @@ const UpdateProduct = () => {
     // Get single product
     const getSingleProduct = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:4000/api/product/get-single-product/${params.slug}`);
+            const { data } = await axios.get(`https://ecommerce-watch.onrender.com/api/product/get-single-product/${params.slug}`);
             if (data?.success) {
                 const p = data.product;
                 setName(p.name);
@@ -74,7 +74,7 @@ const UpdateProduct = () => {
             productData.append("shipping", shipping);
             if (photo) productData.append("photo", photo);
 
-            const { data } = await axios.put(`http://localhost:4000/api/product/update-product/${id}`, productData);
+            const { data } = await axios.put(`https://ecommerce-watch.onrender.com/api/product/update-product/${id}`, productData);
             if (data?.success) {
                 toast.success("Product updated successfully");
                 navigate("/dashboard/admin/products");
@@ -92,7 +92,7 @@ const UpdateProduct = () => {
         try {
             let answer = window.prompt("Are you sure want to delete this product ? ")
             if (!answer) return;
-            const { data } = await axios.delete(`http://localhost:4000/api/product/delete-product/${id}`)
+            const { data } = await axios.delete(`https://ecommerce-watch.onrender.com/api/product/delete-product/${id}`)
             toast.success("Product Deleted Successfully")
             navigate("/dashboard/admin/products")
         } catch (error) {

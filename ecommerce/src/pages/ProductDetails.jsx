@@ -12,7 +12,7 @@ const ProductDetails = () => {
     // Get single product
     const getProduct = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:4000/api/product/get-single-product/${slug}`);
+            const { data } = await axios.get(`https://ecommerce-watch.onrender.com/api/product/get-single-product/${slug}`);
             if (data?.success) {
                 setProduct(data.product);
                 getSimilarProduct(data.product._id, data.product.category._id);
@@ -25,7 +25,7 @@ const ProductDetails = () => {
     // Get related products
     const getSimilarProduct = async (pid, cid) => {
         try {
-            const { data } = await axios.get(`http://localhost:4000/api/product/related-product/${pid}/${cid}`);
+            const { data } = await axios.get(`https://ecommerce-watch.onrender.com/api/product/related-product/${pid}/${cid}`);
             if (data?.success) {
                 setRelatedProduct(data.products);
             }

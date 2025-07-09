@@ -26,7 +26,7 @@ const AllProduct = () => {
     // get all category 
     const getAllCategory = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/category/get-category");
+            const { data } = await axios.get("https://ecommerce-watch.onrender.com/api/category/get-category");
             if (data?.success) {
                 setCategories(data.categories);
             }
@@ -56,7 +56,7 @@ const AllProduct = () => {
         try {
             setLoading(true)
             // const { data } = await axios.get("http://localhost:4000/api/product/get-product");
-            const { data } = await axios.get(`http://localhost:4000/api/product/product-list/${page}`);
+            const { data } = await axios.get(`https://ecommerce-watch.onrender.com/api/product/product-list/${page}`);
             console.log("object", data)
             setLoading(false)
             setProducts(data.products);
@@ -71,7 +71,7 @@ const AllProduct = () => {
     // get Total count 
     const getTotal = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/product/product-count")
+            const { data } = await axios.get("https://ecommerce-watch.onrender.com/api/product/product-count")
             setTotal(data?.total)
         } catch (error) {
             console.log(error)
@@ -87,7 +87,7 @@ const AllProduct = () => {
     const loadMore = async () => {
         try {
             setLoading(true)
-            const { data } = await axios.get(`http://localhost:4000/api/product/product-list/${page}`)
+            const { data } = await axios.get(`https://ecommerce-watch.onrender.com/api/product/product-list/${page}`)
             setLoading(false)
             setProducts([...products, ...data?.products])
         } catch (error) {
@@ -122,7 +122,7 @@ const AllProduct = () => {
     const filterProduct = async () => {
         try {
             const { data } = await axios.post(
-                "http://localhost:4000/api/product/product-filters",
+                "https://ecommerce-watch.onrender.com/api/product/product-filters",
                 { checked, radio }
             );
 

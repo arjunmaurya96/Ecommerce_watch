@@ -36,7 +36,7 @@ const Profile = () => {
                 return;
             }
             const { data } = await axios.put(
-                'http://localhost:4000/api/auth/profile',
+                'https://ecommerce-watch.onrender.com/api/auth/profile',
                 {
                     name,
                     email,

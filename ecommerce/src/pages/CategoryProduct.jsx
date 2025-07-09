@@ -11,7 +11,7 @@ const CategoryProduct = () => {
     const getProductByCat = async () => {
         try {
             const { data } = await axios.get(
-                `http://localhost:4000/api/product/product-category/${params.slug}`
+                `https://ecommerce-watch.onrender.com/api/product/product-category/${params.slug}`
             );
             setProducts(data?.products || []);
             setCategory(data?.category || {});

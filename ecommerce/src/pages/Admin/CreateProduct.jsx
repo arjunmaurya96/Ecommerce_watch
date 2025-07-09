@@ -22,7 +22,7 @@ const CreateProduct = () => {
     // Get all categories
     const getAllCategory = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/category/get-category");
+            const { data } = await axios.get("https://ecommerce-watch.onrender.com/api/category/get-category");
             if (data?.success) {
                 setCategories(data.categories);
             }
@@ -51,7 +51,7 @@ const CreateProduct = () => {
             productData.append("photo", photo);
 
             const { data } = await axios.post(
-                "http://localhost:4000/api/product/create-product",
+                "https://ecommerce-watch.onrender.com/api/product/create-product",
                 productData,
                 {
                     headers: {

@@ -9,7 +9,7 @@ const CardHome = () => {
     // Fetch all products
     const getAllProducts = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/product/get-product");
+            const { data } = await axios.get("https://ecommerce-watch.onrender.com/api/product/get-product");
             setData(data.products);
         } catch (error) {
             console.log(error);

@@ -20,7 +20,8 @@ const CreateCategory = () => {
             const token = localStorage.getItem("authToken");
 
             const { data } = await axios.post(
-                "http://localhost:4000/api/category/create-category",
+                // "http://localhost:4000/api/category/create-category",
+                "https://ecommerce-watch.onrender.com/api/category/create-category",
                 { name },
                 {
                     headers: {
@@ -45,7 +46,7 @@ const CreateCategory = () => {
     // Get all categories
     const getAllCategory = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/category/get-category");
+            const { data } = await axios.get("https://ecommerce-watch.onrender.com/api/category/get-category");
             if (data?.success) {
                 setCategories(data.categories);
             }
@@ -66,7 +67,7 @@ const CreateCategory = () => {
             const token = localStorage.getItem("authToken");
 
             const { data } = await axios.put(
-                `http://localhost:4000/api/category/update-category/${selected._id}`,
+                `https://ecommerce-watch.onrender.com/api/category/update-category/${selected._id}`,
                 { name: updatedName }, // request body
                 {
                     headers: {
@@ -97,7 +98,7 @@ const CreateCategory = () => {
             const token = localStorage.getItem("authToken");
 
             const { data } = await axios.delete(
-                `http://localhost:4000/api/category/delete-category/${categoryId}`,
+                `https://ecommerce-watch.onrender.com/api/category/delete-category/${categoryId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,

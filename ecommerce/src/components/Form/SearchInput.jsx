@@ -10,7 +10,8 @@ const SearchInput = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.get(`http://localhost:4000/api/product/search/${search.keyword}`);
+            // const { data } = await axios.get(`http://localhost:4000/api/product/search/${search.keyword}`);
+            const { data } = await axios.get(`https://ecommerce-watch.onrender.com/api/product/search/${search.keyword}`);
             setSearch({ ...search, result: data });
             navigate("/searchitem");
         } catch (error) {
